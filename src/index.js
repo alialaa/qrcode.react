@@ -112,9 +112,10 @@ class QRCodeCanvas extends React.Component<QRProps> {
   }
 
   render() {
+    let styles = this.props.style || {};
     return (
       <canvas
-        style={{...this.props.style, height: this.props.size, width: this.props.size}}
+        style={{...styles, height: this.props.size, width: this.props.size}}
         height={this.props.size}
         width={this.props.size}
         ref={(ref: ?HTMLCanvasElement): ?HTMLCanvasElement =>
